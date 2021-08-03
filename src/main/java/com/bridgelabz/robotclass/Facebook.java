@@ -91,8 +91,8 @@ public class Facebook {
             String child_window = iterator.next();
             if (!parent.equals(child_window)) {
                 driver.switchTo().window(child_window);
-                System.out.println(driver.switchTo().window(child_window).getTitle());
                 driver.get("https://www.amazon.in/");
+                System.out.println(driver.switchTo().window(child_window).getTitle());
             }
         }
         driver.switchTo().window(parent);
